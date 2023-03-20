@@ -1,6 +1,6 @@
 {
   "name": "@hemjs/config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Injection-friendly configuration for Hem applications",
   "author": "Augustus Kamau",
   "license": "MIT",
