@@ -28,6 +28,7 @@
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
     "@hemtypes/core": "0.2.3",
+    "@hemtypes/hem": "0.1.2",
     "@types/jest": "29.5.0",
     "@types/node": "18.15.5",
     "@typescript-eslint/eslint-plugin": "5.56.0",

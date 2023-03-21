@@ -1,5 +1,6 @@
 import { isFunction, isObject, isPlainObject } from '@hemjs/notions';
 import type { Type } from '@hemtypes/core';
+import type { Module } from '@hemtypes/hem';
 import { uid } from 'uid';
 import type { ConfigProvider } from './types';
 import { mergeConfig } from './utils';
@@ -84,8 +85,8 @@ export class ConfigAggregator {
    * @param provider the provider to check
    * @returns whether the given provider has the register method
    */
-  private isConfigProvider(provider: ConfigProvider): boolean {
-    return isFunction((provider as any).register);
+  private isConfigProvider(provider: ConfigProvider): provider is Module {
+    return isFunction((provider as Module).register);
   }
 
   /**
@@ -93,7 +94,7 @@ export class ConfigAggregator {
    * @param instance the function to map
    * @returns the resulting class
    */
-  private mapToClass<T extends Function>(instance: T): Type<any> {
+  private mapToClass<T extends Function>(instance: T): Type<Module> {
     return this.assignToken(
       class {
         register = (...params: Array<unknown>) => {
@@ -109,7 +110,7 @@ export class ConfigAggregator {
    * @param token the unique token
    * @returns the resulting metatype
    */
-  private assignToken(metatype: Type<any>, token = uid(21)): Type<any> {
+  private assignToken(metatype: Type<Module>, token = uid(21)): Type<Module> {
     Object.defineProperty(metatype, 'name', { value: token });
     return metatype;
   }
