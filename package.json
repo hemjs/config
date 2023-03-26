@@ -27,7 +27,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.5.0",
     "@commitlint/config-conventional": "17.4.4",
-    "@hemtypes/core": "0.2.3",
+    "@hemtypes/core": "0.2.4",
     "@hemtypes/hem": "0.1.2",
     "@types/jest": "29.5.0",
     "@types/node": "18.15.10",
