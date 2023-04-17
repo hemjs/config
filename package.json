@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@hemjs/notions": "0.1.1",
-    "glob": "10.1.0",
+    "glob": "10.2.1",
     "uid": "2.0.2"
   },
   "devDependencies": {
